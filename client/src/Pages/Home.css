@@ -1,0 +1,219 @@
+.main-div-home {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas:
+    "navbar navbar"
+    "paperside aiside";
+}
+
+/* Navbar 2end css style.*/
+.navbar-side {
+  grid-area: navbar;
+  /* border-bottom: 2px solid #fae8b4;
+  border-radius: 5px; */
+}
+
+/**********************************************AI Side Area***************************************** */
+
+.ai-side {
+  /* background-color: #e8d59e; */
+  background-color: #fff;
+  grid-area: aiside;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.inner-ai-side {
+  background-color: #f7e6ca;
+  /* background-color: #fff; */
+  height: 82vh;
+  /* border: 2px solid #d9bbb0; */
+  border: 1px solid #b0aca8;
+  /* border: 2px solid #b0aca8; */
+  border-radius: 20px;
+}
+
+/**********************************************Chat Response Area in AI Side********************** */
+
+.inner-ai-side-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.logo-in-ai img {
+  height: 100px;
+  width: 100px;
+  animation: bounce 3s infinite;
+}
+
+.inner-ai-side-page p {
+  text-align: center;
+  margin: 0;
+  flex-grow: 1;
+}
+/******************************************When AI Chat Responding At AI Side********************** */
+.result {
+  padding: 0px 5%;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+.result::-webkit-scrollbar {
+  display: none;
+}
+.result-title {
+  font-size: 17px;
+  margin: 20px 0px;
+  display: flex;
+  align-items: start;
+  gap: 10px;
+}
+.result img {
+  border-radius: 50%;
+}
+.result-data {
+  display: flex;
+  align-items: start;
+  gap: 2px;
+}
+
+.loader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.loader hr {
+  border-radius: 4px;
+  border: none;
+  background-color: #e8d59e;
+  background: linear-gradient(to right, #96bbda, #e8d59e, #c2f0f8);
+  background-size: 400px 50px;
+  height: 20px;
+  animation: loader 5s infinite linear;
+}
+
+@keyframes loader {
+  0% {
+    background-position: -800px 0px;
+  }
+  100% {
+    background-position: 800px 0px;
+  }
+}
+
+.result-data p {
+  line-height: 1.2;
+}
+/**********************************************Input Area in AI Side********************** */
+
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: #f7e6ca;
+  /* background-color: #f5f5f5; */
+  /* border: 1px solid #ad9c8e; */
+  border: 1px solid #b0aca8;
+  border-radius: 50px;
+  padding: 10px 20px;
+  margin-top: 8px;
+}
+.search-box img {
+  width: 24px;
+  cursor: pointer;
+}
+.inner-ai-side-page-input {
+  background-color: transparent;
+}
+
+/********************************************** Paper Side**************************************** */
+
+.paper-side {
+  grid-area: paperside;
+  background-color: #fff;
+}
+
+.inner-paper-side {
+  /* background-color: #fff; */
+  background-color: #cb9df0a7;
+  height: 90vh;
+  border-radius: 20px;
+  overflow-y: scroll;
+  padding: 20px;
+  margin-left: 2px;
+  margin-top: 2px;
+}
+
+.inner-paper-side::-webkit-scrollbar {
+  display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .main-div-home {
+    grid-template-columns: 1fr; /* Stack columns on mobile */
+    grid-template-rows: 60px 1fr 1fr; /* Add an extra row for aiside */
+    grid-template-areas:
+      "navbar"
+      "paperside"
+      "aiside"; /* Stack areas vertically */
+  }
+
+  .navbar-side {
+    grid-area: navbar;
+  }
+
+  .paper-side {
+    grid-area: paperside;
+  }
+
+  .ai-side {
+    grid-area: aiside;
+  }
+}
+
+
+
+.select-input {
+  margin-right: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  color: black;
+  background: #ddbff5;
+}
+.select-input:hover{
+  outline: none;
+
+}
+.select-input .option-values{
+ background: #ddbff5;
+}
+.option-values-div{
+  height: 100%;
+  width: 100%;
+  background-color: red;
+}

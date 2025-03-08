@@ -1,0 +1,100 @@
+.main-course-component {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  max-width: 30rem;
+  /* margin-right: auto; */
+  margin-top: 0.5rem /* 8px */;
+  margin-bottom: 0.5rem /* 8px */;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Blackish shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  max-height: 13rem;
+  /* padding: 5px; */
+}
+.main-course-component:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
+}
+.main-course-component .course-info {
+  max-width: 12rem;
+  background-color: #ebebeb;
+  color: black;
+  padding: 0.75rem;
+  overflow-y: scroll;
+  border-radius: 0px 25px 25px 0px ;
+}
+.course-info::-webkit-scrollbar {
+  display: none;
+}
+.main-course-component .course-info p {
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.25rem /* 20px */;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.main-course-component .course-info h1 {
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+  font-weight: 700;
+  margin-top: 0.5rem /* 8px */;
+}
+.main-course-component .course-info a {
+  color: rgb(139, 149, 232);
+  margin-top: 1rem /* 16px */;
+  display: inline-block;
+}
+.main-course-component .chapter-details {
+  padding: 0.5rem /* 8px */;
+  /* max-width: 18rem; */
+  min-width: 60%;
+}
+.main-course-component .chapter-details p {
+  font-size: 0.875rem /* 14px */;
+  line-height: 1rem /* 20px */;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: gray;
+}
+.main-course-component .chapter-details h2 {
+  font-size: 1.3rem /* 30px */;
+  line-height: 2rem /* 36px */;
+  font-weight: 700;
+  margin-top: 0.5rem /* 8px */;
+  color: #322f82;
+}
+.main-course-component .chapter-details .progress-bar-div {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.main-course-component .chapter-details .progress-bar {
+  width: 100%;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  height: 0.625rem /* 10px */;
+}
+.main-course-component .chapter-details .progress-bar .inner-progress-bar {
+  background-color: #312e81;
+  height: 0.625rem /* 10px */;
+  border-radius: 9999px;
+  width: 86%;
+}
+.main-course-component .chapter-details .progress-bar-span {
+  margin-left: 0.5rem /* 8px */;
+  font-size: 0.875rem /* 14px */;
+  line-height: 1rem /* 20px */;
+  color: #6b7280;
+}
+
+.main-course-component .chapter-details .btn {
+  background-color: #312e81;
+  color: #fff;
+  padding-top: 0.5rem /* 8px */;
+  padding-bottom: 0.5rem /* 8px */;
+  padding-left: 1.5rem /* 24px */;
+  padding-right: 1.5rem /* 24px */;
+  border-radius: 9999px;
+  margin-top: 0.5rem /* 24px */;
+}

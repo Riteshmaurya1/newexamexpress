@@ -1,0 +1,24 @@
+/* list-none m-0 p-2 bg-gray-100 text:sm */
+/* py-1  pr-10 rounded-sm px-2 hover:bg-gray-200 cursor-pointer  */
+/* py-1 px-2 hover:bg-gray-200 cursor-pointer pr-10 */
+
+/* Account Details */
+.account-details {
+  display: flexbox;
+  justify-content: space-around;
+  background-color: rgb(233, 233, 233);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  height: 5rem;
+  max-width:fit-content;
+  padding: 5px;
+}
+.account-details-li {
+  list-style: none;
+  color: black;
+}
+.account-details-hr{
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+}
+

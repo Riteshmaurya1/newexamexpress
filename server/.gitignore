@@ -1,0 +1,10 @@
+# Ignore node_modules
+node_modules/
+
+# Ignore .env
+.env
+
+# Other common ignores
+.DS_Store
+dist/
+logs/

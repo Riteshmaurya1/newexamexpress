@@ -1,0 +1,123 @@
+.navbar-top {
+  background-color: #cb9df0a7;
+  position: relative;
+  z-index: 50;
+}
+
+.navbar-search-box {
+  background-color: #f5f5f5;
+  border: 1px solid #b0aca8;
+  border-radius: 50px;
+  padding: 5px 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar-search-box:hover {
+  box-shadow: 0 0 0 3px rgba(247, 230, 203, 0.25);
+}
+
+.navbar-search-box img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.navbar-search-box img:hover {
+  transform: scale(1.1);
+}
+
+.navbar-page-input {
+  background-color: transparent;
+  color: black;
+  padding: 4px 0;
+}
+
+.account-details {
+  background-color: rgb(233, 233, 233);
+  border: 1px solid rgb(255, 255, 255);
+  height: fit-content;
+}
+
+.account-details-li {
+  list-style: none;
+  color: black;
+  padding: 2px 12px;
+  transition: background-color 0.2s;
+  border-radius: 10px;
+}
+
+.account-details-li:hover {
+  background-color: #ddbff5;
+}
+
+.account-details-hr {
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  margin: 4px 0;
+}
+
+.select-input {
+  width: 200px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  color: #333;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 12px auto;
+}
+
+.select-input:hover {
+  border-color: #f7e6cb;
+  background-color: #d8b4f6;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23f7e6cb%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+}
+
+.select-input:focus {
+  border-color: #f7e6cb;
+  box-shadow: 0 0 0 3px rgba(214, 196, 165, 0.25);
+}
+
+.select-input option {
+  padding: 12px 15px;
+  font-size: 15px;
+  background-color: #fff;
+  color: #333;
+}
+
+.select-input option:hover {
+  background-color: #f7e6cb !important;
+  color: #2d2d2d;
+}
+
+.select-input option:checked {
+  background-color: #f7e6cb;
+  color: #232323;
+  font-weight: 500;
+}
+
+/* Add media queries */
+@media (max-width: 768px) {
+  .navbar-search-box {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .select-input {
+    width: 100%;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .account-details {
+    position: static;
+    width: 100%;
+  }
+}
