@@ -16,7 +16,6 @@ import {
   deleteSubject,
 } from "../controllers/authControllers.js";
 import userAuth from "../middleware/userAuth.js";
-import { getUserData } from "../controllers/userController.js";
 const authRouter = express.Router();
 
 authRouter.post("/register", register);

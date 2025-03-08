@@ -29,7 +29,9 @@ export const AppContextProvider = (props) => {
     // for the user data
     const getUserData = async () => {
         try {
-            const { data } = await axios.get(backendUrl + '/api/user/data')
+            const { data } = await axios.get(backendUrl + '/api/user/data', {
+                withCredentials: true, // Include cookies in the request
+            })
             data.success ? setUserData(data.userData) : toast.error(data.message)
         } catch (error) {
             toast.error(error.message)
@@ -47,7 +49,6 @@ export const AppContextProvider = (props) => {
                 {
                     branch,
                     semester,
-                    // subjectname: subjectName,
                 }
             );
 
