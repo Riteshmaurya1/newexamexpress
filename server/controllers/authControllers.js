@@ -16,7 +16,6 @@ export const register = async (req, res) => {
       success: false,
       message: "Please fill in all fields",
     });
-    // console.log(req.body);
   }
 
   try {
@@ -131,58 +130,6 @@ export const register = async (req, res) => {
 };
 
 // this is login form....
-// export const login = async (req, res) => {
-//   const { email, password } = req.body;
-
-//   // for login your account check your emmail and password!.
-//   if (!email || !password) {
-//     return res.status(400).json({
-//       success: false,
-//       message: error.message,
-//     });
-//   }
-
-//   try {
-//     const user = await userModel.findOne({ email });
-//     if (!user) {
-//       return res.status(404).json({
-//         success: false,
-//         message: "Please Create Account!..",
-//       });
-//     }
-
-//     const isMatched = await bcrypt.compare(password, user.password);
-//     if (!isMatched) {
-//       return res.status(401).json({
-//         success: false,
-//         message: "Invalid Password...",
-//       });
-//     }
-
-//     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
-//       expiresIn: "7d",
-//     });
-
-//     // making cookies for the user which is redirect to the his account.
-//     res.cookie("token", token, {
-//       httpOnly: true,
-//       secure: process.env.NODE_ENV === "production",
-//       sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
-//       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
-//     });
-
-//     return res.status(201).json({
-//       success: true,
-//       message: "Successfuly login...",
-//     });
-//   } catch (error) {
-//     return res.status(500).json({
-//       success: false,
-//       message: "Please enter both email and password",
-//     });
-//   }
-// };
-
 export const login = async (req, res) => {
   const { email, password } = req.body;
 
@@ -215,6 +162,7 @@ export const login = async (req, res) => {
       expiresIn: "7d",
     });
 
+    // Enable for the localhost host render
     // Set the token cookie
     // res.cookie("token", token, {
     //   httpOnly: true, // Prevent client-side JavaScript from accessing the cookie
@@ -223,6 +171,7 @@ export const login = async (req, res) => {
     //   maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
     // });
 
+    // Enable for the web host at render
     res.cookie("token", token, {
       httpOnly: true, // Prevent client-side JavaScript from accessing the cookie
       secure: true, // Required for HTTPS
@@ -240,6 +189,7 @@ export const login = async (req, res) => {
     });
   }
 };
+
 // logout code is here......
 export const logout = async (req, res) => {
   try {
@@ -572,7 +522,6 @@ export const usersDashboard = async (req, res) => {
       userData, // Return array of user data
     });
   } catch (error) {
-    console.error("Error fetching user data:", error); // Log the error for debugging
     return res.status(500).json({
       success: false,
       message: "Error fetching user data",
@@ -634,7 +583,6 @@ export const updateSubject = async (req, res) => {
     unitQuestions,
     VideoLink,
   } = req.body; // Get updated fields from request body
-  console.log("Request body:", req.body); // Debugging
 
   try {
     // Find the subject by ID

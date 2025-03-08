@@ -3,7 +3,6 @@ import SubjectModel from "../models/subjectModel.js";
 export const getSubjectData = async (req, res) => {
   try {
     const { branch, semester } = req.body;
-    console.log("Request body:", req.body);
     
     // const { branch, semester, subjectname } = req.body;
 
@@ -14,10 +13,7 @@ export const getSubjectData = async (req, res) => {
     const subjects = await SubjectModel.find({
       branch: branchFronted,
       semester: semesterFronted,
-      // subjectName: subjectname,
     });
-    // const subjects = await SubjectModel.find({ branch: "cse", semester: "7" });
-    console.log("Subjects found:", subjects);
 
     // Return ALL matching subjects as an array
     if (subjects.length > 0) {

@@ -38,5 +38,5 @@ app.use("/api/user", userRouter);
 app.use("/api/subjects", subjectRouter);
 
 app.listen(port, () => {
-  console.log(`Server is running on PORT:${port}`);
+  console.log(`Server is running on PORT:${port} ✔✨`);
 });

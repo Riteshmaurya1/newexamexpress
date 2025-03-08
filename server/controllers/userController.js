@@ -11,7 +11,6 @@ export const getUserData = async (req, res) => {
         message: "Please Create an account first.",
       });
     }
-    console.log(user);
     
 
     return res.status(200).json({
