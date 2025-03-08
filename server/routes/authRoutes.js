@@ -36,6 +36,6 @@ authRouter.put("/ritesh/dashboard/subject/update/:id",updateSubject);
 authRouter.delete("/ritesh/dashboard/subject/delete/:id",deleteSubject);
 authRouter.get("/ritesh/dashboard/users", usersDashboard);
 authRouter.delete("/ritesh/dashboard/users/:email", deleteUsers);
-authRouter.get("/ritesh/dashboard/profile", userAuth);
+authRouter.get("/ritesh/dashboard/profile",);
 
 export default authRouter;

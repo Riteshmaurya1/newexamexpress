@@ -30,7 +30,9 @@ const DashboardHome = () => {
   // Fetch dashboard data from the backend
   const fetchDashboardData = async () => {
     try {
-      const response = await axios.get(`${backendUrl}/api/auth/ritesh/dashboard`);
+      const response = await axios.get(`${backendUrl}/api/auth/ritesh/dashboard`, {
+        withCredentials: true,
+      });
 
       if (response.data.success) {
         setDashboardData({
