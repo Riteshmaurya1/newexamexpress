@@ -216,13 +216,19 @@ export const login = async (req, res) => {
     });
 
     // Set the token cookie
+    // res.cookie("token", token, {
+    //   httpOnly: true, // Prevent client-side JavaScript from accessing the cookie
+    //   secure: process.env.NODE_ENV === "production", // Only send over HTTPS in production
+    //   sameSite: process.env.NODE_ENV === "production" ? "none" : "strict", // Allow cross-site cookies in production
+    //   maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
+    // });
+
     res.cookie("token", token, {
       httpOnly: true, // Prevent client-side JavaScript from accessing the cookie
-      secure: process.env.NODE_ENV === "production", // Only send over HTTPS in production
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax", // Allow cross-site cookies in production
+      secure: true, // Required for HTTPS
+      sameSite: "none", // Required for cross-origin requests
       maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
     });
-
     return res.status(200).json({
       success: true,
       message: "Successfully logged in.",
