@@ -32,13 +32,13 @@ Exam Express is a comprehensive web application designed to help students prepar
 
 ## Screenshots 📸
 - **Home Page**  
-  ![Home Page](screenshots/home-page.png)
+  ![Home Page](/client/public/HomePage.png)
 
 - **Dashboard**  
-  ![Dashboard](screenshots/dashboard.png)
+  ![Dashboard](/client/public/dashboard.png)
 
 - **Subject Page**  
-  ![Subject Page](screenshots/subject-page.png)
+  ![Subject Page](/client/public/SubjectPage.png)
 
 ## Installation 🛠️
 
