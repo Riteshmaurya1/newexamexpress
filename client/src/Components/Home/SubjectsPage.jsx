@@ -10,10 +10,7 @@ const SubjectsPage = () => {
     filter,
     setFilter
   } = useContext(AppContext);
-
-  // State for search filter
-  // const [filter, setFilter] = useState("");
-
+  
   // Create refs for GSAP animations
   const errorRef = useRef(null);
   const cardRef = useRef(null);

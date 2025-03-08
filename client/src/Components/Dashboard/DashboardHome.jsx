@@ -31,7 +31,6 @@ const DashboardHome = () => {
   const fetchDashboardData = async () => {
     try {
       const response = await axios.get(`${backendUrl}/api/auth/ritesh/dashboard`);
-      // console.log('Dashboard data:', response.data);
 
       if (response.data.success) {
         setDashboardData({

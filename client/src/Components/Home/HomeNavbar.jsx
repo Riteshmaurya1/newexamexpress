@@ -156,27 +156,6 @@ const HomeNavbar = () => {
 
         {/* Profile Section */}
         {userData ?
-          // <div className=' w-8 h-8 flex justify-center items-center rounded-full bg-black text-white relative group'>
-          //   {userData.name[0].toUpperCase()}
-          //   <div className=' absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-10 sm:right-auto'>
-          //     <ul className='account-details'>
-          //       {
-          //         <li className='account-details-li' >{userData.email}</li>
-          //       }
-          //       {
-          //         <hr className='account-details-hr' />
-          //       }
-          //       {!userData.isAccountVerified &&
-          //         <li onClick={sendVerificationOtp} className='account-details-verify-email cursor-pointer'>
-          //           Verify Email
-          //         </li>
-          //       }
-          //       {
-          //         <li onClick={logout} className='account-details-li cursor-pointer'>Log Out</li>
-          //       }
-          //     </ul>
-          //   </div>
-          // </div>
           <div
             className='w-8 h-8 flex justify-center items-center rounded-full bg-black text-white relative cursor-pointer'
             onClick={toggleDropdown}

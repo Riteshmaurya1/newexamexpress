@@ -41,7 +41,7 @@ export const AppContextProvider = (props) => {
     // For My Subject Data from the 
     const getSubjectData = async () => {
         try {
-            console.log("Sending request with:", { branch, semester });
+            // console.log("Sending request with:", { branch, semester });
 
             // Send a POST request to the backend
             const response = await axios.post(
@@ -52,7 +52,7 @@ export const AppContextProvider = (props) => {
                 }
             );
 
-            console.log("Response from backend:", response.data); // Debugging
+            // console.log("Response from backend:", response.data); // Debugging
 
             if (response.data.success) {
                 setSubjectData(response.data.subjectData); // Set the subject data
