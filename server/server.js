@@ -11,8 +11,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 connectDB();
 
-const allowedOrigins = ["http://localhost:5173"];
-// const allowedOrigins = ["https://examexpresso.vercel.app"];
+// const allowedOrigins = ["http://localhost:5173"];
+const allowedOrigins = ["https://examexpress.vercel.app"];
 
 // Enable CORS for all routes
 const corsOptions = {
